@@ -10,16 +10,16 @@ int[,,] array3d = new int[2,2,2];
 
 void GetArray ()
 {
-    // int num = 10;
+    int num = 10;
     for (int k = 0; k < array3d.GetLength(2); k++)
     {
         for (int i = 0; i < array3d.GetLength(0); i++)
         {
             for (int j = 0; j < array3d.GetLength(1); j++)
             {
-                array3d[i,j,k] = new Random().Next(10,25);
-                // array3d[i,j,k] = num;
-                // num += 5;
+                // array3d[i,j,k] = new Random().Next(10,100);
+                array3d[i,j,k] = num;
+                num += 5;
             }
         }
     }
@@ -41,38 +41,38 @@ void PrintArray ()
     Console.WriteLine();
 }
 
-void FindNum ()
-{
-    for (int k = 0; k < array3d.GetLength(2); k++)
-    {
-        for (int i = 0; i < array3d.GetLength(0); i++)
-        {
-            for (int j = 0; j < array3d.GetLength(1); j++)
-            {
-                for (int n = 0; n < array3d.GetLength(2); n++)
-                {
-                    for (int l = 0; l < array3d.GetLength(0); l++)
-                    {
-                        for (int m = 0; m < array3d.GetLength(1); m++)
-                        {
-                            if (array3d[i,j,k] == array3d[l,m,n] && i!=l && j!=m && k!=n)
-                            {
-                                // i!=l && j!=m && k!=n && 
-                                array3d[i,j,k] = new Random().Next(30,100);
-                            }
-                        }
-                    }
-                }        
-            }
-        }
-    }
-}
+// void FindNum ()
+// {
+//     for (int k = 0; k < array3d.GetLength(2); k++)
+//     {
+//         for (int i = 0; i < array3d.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < array3d.GetLength(1); j++)
+//             {
+//                 for (int n = 0; n < array3d.GetLength(2); n++)
+//                 {
+//                     for (int l = 0; l < array3d.GetLength(0); l++)
+//                     {
+//                         for (int m = 0; m < array3d.GetLength(1); m++)
+//                         {
+//                             if (array3d[i,j,k] == array3d[l,m,n] && i!=l && j!=m && k!=n)
+//                             {
+//                                 // i!=l && j!=m && k!=n && 
+//                                 array3d[i,j,k] = new Random().Next(30,100);
+//                             }
+//                         }
+//                     }
+//                 }        
+//             }
+//         }
+//     }
+// }
 
 
 GetArray();
 PrintArray();
-FindNum();
-PrintArray();
+// FindNum();
+// PrintArray();
 
 // int[] arr = new int[]{1,2,3,4};
 
